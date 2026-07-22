@@ -1,0 +1,377 @@
+﻿<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Saffron Table Restaurant</title><style>
+:root {
+  --ink: #16171c;
+  --muted: #626a73;
+  --paper: #faf8f2;
+  --white: #ffffff;
+  --line: rgba(22, 23, 28, 0.16);
+  --accent: #0f8f8c;
+  --accent-2: #e95845;
+  --accent-3: #d69b1e;
+  --soft: #eef2e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px clamp(18px, 5vw, 72px);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.brand {
+  font-weight: 900;
+  font-size: 1.08rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(280px, 0.98fr);
+  gap: clamp(28px, 6vw, 84px);
+  align-items: center;
+  min-height: 86vh;
+  padding: clamp(48px, 8vw, 104px) clamp(18px, 5vw, 72px);
+}
+
+.hero.center {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.hero.center .lead,
+.hero.center h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent-2);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(3.2rem, 9vw, 8.4rem);
+  line-height: 0.9;
+}
+
+h2 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4.7rem);
+  line-height: 1;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+p {
+  color: var(--muted);
+}
+
+.lead {
+  max-width: 680px;
+  font-size: clamp(1.05rem, 2vw, 1.32rem);
+}
+
+.actions,
+.cards,
+.chips,
+.stats,
+.menu-list,
+.property-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--white);
+  font-weight: 900;
+}
+
+.button.alt {
+  background: transparent;
+  color: var(--ink);
+}
+
+.visual {
+  position: relative;
+  min-height: 470px;
+  border: 1px solid var(--ink);
+  background: var(--soft);
+  overflow: hidden;
+  box-shadow: 12px 12px 0 var(--ink);
+}
+
+.visual::before,
+.visual::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--ink);
+}
+
+.visual::before {
+  inset: 34px 34px auto auto;
+  width: 45%;
+  height: 40%;
+  background: var(--accent);
+}
+
+.visual::after {
+  left: 34px;
+  bottom: 34px;
+  width: 62%;
+  height: 45%;
+  background: var(--accent-3);
+}
+
+.visual span {
+  position: absolute;
+  z-index: 2;
+  left: 38px;
+  top: 38px;
+  width: 130px;
+  height: 130px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--white);
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.section {
+  padding: clamp(52px, 8vw, 96px) clamp(18px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.section-head p {
+  max-width: 420px;
+}
+
+.cards {
+  align-items: stretch;
+}
+
+.card {
+  flex: 1 1 240px;
+  min-height: 210px;
+  padding: 24px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.card.big {
+  flex-basis: 360px;
+  min-height: 280px;
+}
+
+.card .tag {
+  display: inline-flex;
+  margin-bottom: 26px;
+  padding: 7px 10px;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 5vw, 70px);
+  align-items: start;
+}
+
+.panel {
+  padding: 28px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.chips span,
+.property-search span {
+  padding: 10px 13px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+  font-weight: 800;
+}
+
+.stat {
+  flex: 1 1 150px;
+  padding: 18px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.stat strong {
+  display: block;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.feature-band {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.feature-band p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.feature-band .card {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px clamp(18px, 5vw, 72px);
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
+
+.footer p {
+  margin: 0;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+}
+
+.shop-tile {
+  min-height: 240px;
+  padding: 24px;
+  border: 1px solid var(--ink);
+  background: var(--accent);
+  color: var(--white);
+}
+
+.shop-tile:nth-child(2),
+.shop-tile:nth-child(3) {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.menu-list article {
+  flex: 1 1 260px;
+  padding: 22px;
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.doctor-card {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.avatar {
+  width: 78px;
+  height: 78px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .nav,
+  .section-head,
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero,
+  .split,
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    min-height: 340px;
+  }
+}
+
+    </style></head>
+  <body style="--accent:#8f2d1f;--accent-2:#d69b1e;--accent-3:#0f8f8c;--soft:#f7e4d4">
+    <header class="nav"><a class="brand" href="#">Saffron Table</a><nav class="nav-links"><a href="#menu">Menu</a><a href="#story">Story</a><a href="#reserve">Reserve</a><a href="../index.html#work">Portfolio</a></nav></header>
+    <main>
+      <section class="hero"><div><p class="eyebrow">Restaurant Website</p><h1>Modern Indian dining with a menu-first experience.</h1><p class="lead">A restaurant project with a strong food-service layout: menu highlights, story content, guest reviews, booking panel, and location CTA.</p><div class="actions"><a class="button" href="#menu">View Menu</a><a class="button alt" href="#reserve">Reserve Table</a></div></div><div class="visual"><span>FOOD</span></div></section>
+      <section class="section" id="menu"><div class="section-head"><h2>Signature menu</h2><p>Menu blocks are built for easy reading and quick restaurant decisions.</p></div><div class="menu-list"><article><h3>Paneer Tikka Platter</h3><p>Smoky starter with chutney and salad.</p></article><article><h3>Royal Thali</h3><p>Balanced meal section for lunch visitors.</p></article><article><h3>Saffron Kulfi</h3><p>Dessert highlight for the menu.</p></article></div></section>
+      <section class="section split" id="story"><div><p class="eyebrow">Chef Story</p><h2>Warm visual tone for a food business.</h2><p>The page structure supports brand story, customer trust, reservation action, and local search information.</p></div><div class="panel"><h3>Guest Reviews</h3><p>"Clear menu, easy reservation, and professional layout for a restaurant website."</p><div class="stats"><div class="stat"><strong>4.9</strong><span>Rating</span></div><div class="stat"><strong>35</strong><span>Dishes</span></div></div></div></section>
+      <section class="section feature-band" id="reserve"><div class="section-head"><h2>Reserve a table</h2><p>Booking CTA, phone contact, opening hours, location block, and menu navigation.</p></div></section>
+    </main>
+    <footer class="footer"><p>Project by Mayuri Kshirsagar</p><a href="mailto:mayukshirsagar1999@gmail.com">Contact</a></footer>
+  </body>
+</html>
+

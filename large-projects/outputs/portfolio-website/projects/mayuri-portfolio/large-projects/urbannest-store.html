@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UrbanNest Store</title>
+    <style>
+      *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f4f1;color:#151515}.store{display:grid;grid-template-columns:260px 1fr;min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;background:#151515;color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:space-between}.sidebar h1{font-size:2rem;margin:0}.side-links{display:grid;gap:16px;font-weight:800}.main{padding:24px 4vw 70px}.topbar{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:22px}.search{flex:1;min-height:48px;border:1px solid #151515;background:#fff;padding:0 16px;color:#777}.cart{background:#e95845;color:#fff;padding:14px 18px;font-weight:900}.hero{display:grid;grid-template-columns:1fr .9fr;gap:18px}.hero-copy{background:#fff;padding:44px;border:1px solid #151515}.hero-copy h2{font-size:clamp(3rem,7vw,7rem);line-height:.9;margin:10px 0}.hero-img{min-height:500px;background:url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1300&q=80") center/cover}.section{margin-top:48px}.section h2{font-size:clamp(2rem,5vw,4rem);margin:0 0 22px}.categories,.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.category{min-height:190px;padding:18px;background:#fff;border:1px solid #151515;display:flex;align-items:end}.product{background:#fff;border:1px solid #151515}.product img{width:100%;height:230px;object-fit:cover}.product div{padding:16px}.price{font-size:1.45rem;font-weight:900}.banner{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;background:#f2c14e;padding:34px;border:1px solid #151515}.btn{background:#151515;color:#fff;padding:14px 18px;font-weight:900;text-decoration:none}.footer{margin-top:50px;color:#555}@media(max-width:900px){.store{grid-template-columns:1fr}.sidebar{position:static;height:auto}.hero,.categories,.products,.banner{grid-template-columns:1fr}.topbar{flex-direction:column;align-items:stretch}}
+    </style>
+  </head>
+  <body>
+    <div class="store">
+      <aside class="sidebar"><div><h1>UrbanNest</h1><p>Modern ecommerce UI</p></div><nav class="side-links"><a href="#categories">Categories</a><a href="#products">Products</a><a href="#offers">Offers</a><a href="../index.html#work">Portfolio</a></nav></aside>
+      <main class="main">
+        <div class="topbar"><div class="search">Search products, decor, fashion...</div><div class="cart">Cart 03</div></div>
+        <section class="hero"><div class="hero-copy"><p>Home and lifestyle store</p><h2>Curated products for everyday living.</h2><p>This ecommerce page uses a sidebar app-like layout, product catalog, prices, categories, and offer banner.</p></div><div class="hero-img"></div></section>
+        <section class="section" id="categories"><h2>Shop Categories</h2><div class="categories"><div class="category">Living Room</div><div class="category">Fashion</div><div class="category">Desk Setup</div><div class="category">Gadgets</div></div></section>
+        <section class="section" id="products"><h2>Featured Products</h2><div class="products"><article class="product"><img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=80" alt="Lamp"><div><h3>Minimal Lamp</h3><p class="price">Rs. 1,299</p></div></article><article class="product"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80" alt="Watch"><div><h3>Smart Watch</h3><p class="price">Rs. 3,999</p></div></article><article class="product"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Shoes"><div><h3>Daily Sneakers</h3><p class="price">Rs. 2,499</p></div></article><article class="product"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80" alt="Chair"><div><h3>Lounge Chair</h3><p class="price">Rs. 6,499</p></div></article></div></section>
+        <section class="section banner" id="offers"><div><h2>Festival Sale</h2><p>Up to 40% off on home essentials and lifestyle products.</p></div><a class="btn" href="#">Shop Now</a></section>
+        <footer class="footer">Ecommerce website project by Mayuri Kshirsagar</footer>
+      </main>
+    </div>
+  </body>
+</html>
